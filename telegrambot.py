@@ -20,14 +20,14 @@ async def hello(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 async def vish(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     await update.message.reply_text(f'Hello ')
 
-async def info(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    await update.message.reply_text(f'hiii i will to took u..')
-
 # async def info(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-#     id=update['message']['chat']['id']
-#     name=update['message']['chat']['first_name']
-#     uname=update['message']['chat']['username']
-#     await update.message.reply_text(f"""User Info\nID:{id}\nFirst Name:{name}\nUsername:@{uname}""")
+#     await update.message.reply_text(f'hiii i will to took u..')
+
+async def info(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    id=update['message']['chat']['id']
+    name=update['message']['chat']['first_name']
+    uname=update['message']['chat']['username']
+    await update.message.reply_text(f"""User Info\nID:{id}\nFirst Name:{name}\nUsername:@{uname}""")
 
 def val(update,context):
     return update.message.reply_text(f"i'm chat bot")
@@ -55,10 +55,12 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             'hii':"hii i'm your bot...",
             'hello':"hello i'm your bot...",
             "vishal":"hiii vishal",
-            'value':value,
-            "customers":cust,
-            "prodect":prod,
-            "customer name":custname,
+            "h":"work",
+            "link":"https://youtube.com/playlist?list=PLivoekT-Kpvshc3KOhr6oxurE16ajgrxY&si=V05kJKmTeTOVYdGZ",
+            # 'value':value,
+            # "customers":cust,
+            # "prodect":prod,
+            # "customer name":custname,
         }
         for i in txt.keys():
             if text==i:
